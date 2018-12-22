@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
     // Log (server-side) when our server has started

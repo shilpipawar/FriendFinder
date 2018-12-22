@@ -18,7 +18,7 @@
 // 9. For what in your life do you feel most grateful?
 
 // 10. If you could change anything about the way you were raised, what would it be?
-var friend = {
+var friends = [{
   "name":"Ahmed",
   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores":[
@@ -33,4 +33,4 @@ var friend = {
       4,
       1
     ]
-};
+}];
