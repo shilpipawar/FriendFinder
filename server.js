@@ -12,6 +12,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {

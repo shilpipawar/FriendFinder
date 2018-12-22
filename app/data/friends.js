@@ -18,3 +18,19 @@
 // 9. For what in your life do you feel most grateful?
 
 // 10. If you could change anything about the way you were raised, what would it be?
+var friend = {
+  "name":"Ahmed",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+};
