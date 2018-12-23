@@ -8,6 +8,7 @@ var path = require("path");
 var PORT = process.env.PORT || 3000;
 // Create express app instance.
 var app = express();
+app.use(express.static("public"));//make public folder accessble to client
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Friend Finder</title>
+    <title>Friend Finder </title>
 
     <!-- Link to the jQuery Library -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -32,7 +32,7 @@
                 <a href="/" class="brand-logo" id="logo">Friend Finder</a>
                 <ul class="right hide-on-med-and-down" id="head-nav-links">
                     <li><a href="/survey">Survey</a></li>
-                    <li><a href="/api/friends">Friends List</a></li>
+                    <li><a href="/api/friends">API Friends List</a></li>
                 </ul>
             </div>
         </nav>
@@ -41,310 +41,232 @@
     <main>
         <div class="container">
             <div class="row">
-                <div id="mainpanel-content">
-                    <div>
-                        <p>Custom Radio Buttons</p>
-                        <label class="container">One
-                            <input type="radio" checked="checked" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Two
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Three
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Four
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">five
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div>
-                            <p>Given the choice of anyone in the world, whom would you want as a dinner guest?</p>
-                            <label class="container">One
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Two
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Three
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Four
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">five
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
+                <div class="col s12 z-depth-5 mainpanel">
+                    <div id="mainpanel-content">
+                        <h1>Survey Questions</h1>
+                        <div class="divider"></div>
+
+                        <h3>About You</h3>
+
+                        <div class="input-field col s6">
+                            <h5>Name (Required)</h5>
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" class="validate" placeholder="Your Name Here" id="name">
                         </div>
+
+                        <div class="input-field col s6">
+                            <h5>Link to Photo Image (Required)</h5>
+                            <i class="material-icons prefix">picture_in_picture</i>
+                            <input type="text" class="validate" placeholder="Photo Link Here" id="photo">
+                        </div>
+
+                        <!-- Survey Questions -->
+                        <div class="input-field col s12">
+                            <h3>Question 1</h3>
+                            <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+                            <select id="question1">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 2</h3>
+                            <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+                            <select id="question2">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 3</h3>
+                            <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+                            <select id="question3">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 4</h3>
+                            <h5>You rarely do something just out of sheer curiosity.</h5>
+                            <select id="question4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 5</h3>
+                            <h5>People can rarely upset you.</h5>
+                            <select id="question5">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 6</h3>
+                            <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+                            <select id="question6">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 7</h3>
+                            <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+                            <select id="question7">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 8</h3>
+                            <h5>You rarely get carried away by fantasies and ideas.</h5>
+                            <select id="question8">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 9</h3>
+                            <h5>You think that everyone’s views should be respected regardless of whether they are
+                                supported by facts or not.</h5>
+                            <select id="question9">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 10</h3>
+                            <h5>You feel more energetic after spending time with a group of people.</h5>
+                            <select id="question10">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <!-- Survey Submit Button -->
                         <div>
-                                <p>Would you like to be famous? In what way?</p>
-                                <label class="container">One
-                                    <input type="radio" checked="checked" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Two
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Three
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Four
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">five
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <div>
-                                    <p>Before making a telephone call, do you ever rehearse what you are going to say? Why?</p>
-                                    <label class="container">One
-                                        <input type="radio" checked="checked" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Two
-                                        <input type="radio" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Three
-                                        <input type="radio" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Four
-                                        <input type="radio" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">five
-                                        <input type="radio" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div>
-                                        <p>Custom Radio Buttons</p>
-                                        <label class="container">One
-                                            <input type="radio" checked="checked" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">Two
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">Three
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">Four
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">five
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                                Responses
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </main>
+
+    <!-- Modal Dialog Displaying Closest Friend Match -->
+    <div id="result-model" class="modal">
+        <div class="modal-content">
+            <h4>Closest Friend Match</h4>
+            <div class="divider"></div>
+            <h5 id="match-name"></h5>
+            <img id="match-img" class="materialboxed" width="650" src="">
+        </div>
+        <div class="modal-footer">
+            <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+        </div>
+    </div>
+
     <script type="text/javascript">
-        // VARIABLES
-        // ==========================================================================
-        // The array of questions for our quiz game.
-        var questions = [
-            { q: "The sky is blue.", a: "t" },
-            { q: "There are 365 days in a year.", a: "t" },
-            { q: "There are 42 ounces in a pound.", a: "f" },
-            { q: "The Declaration of Independence was created in 1745.", a: "f" },
-            { q: "Bananas are vegetables.", a: "f" }
-        ];
+        $(document).ready(function () {
+            $('select').material_select();
+            $('.modal').modal({
+                dismissible: false, // Modal can be dismissed by clicking outside of the modal
+                opacity: .5, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+                outDuration: 200, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%' // Ending top style attribute
+            });
+        });
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
 
-        // We start the game with a score of 0.
-        var score = 0;
-        // Variable to hold the index of current question.
-        var questionIndex = 0;
-
-        // FUNCTIONS
-        // ==============================================================================
-
-        // Function to render questions.
-        function renderQuestion() {
-            // If there are still more questions, render the next one.
-            if (questionIndex <= (questions.length - 1)) {
-                document.querySelector("#question").innerHTML = questions[questionIndex].q;
+            // If all required fields are filled
+            // Gather user inputs
+            var input = {
+                name: $('#match-name').val().trim(),
+                photo: $('#match-img').val().trim(),
+                scores: [
+                    $('#question1').val().trim(),
+                    $('#question2').val().trim(),
+                    $('#question3').val().trim(),
+                    $('#question4').val().trim(),
+                    $('#question5').val().trim(),
+                    $('#question6').val().trim(),
+                    $('#question7').val().trim(),
+                    $('#question8').val().trim(),
+                    $('#question9').val().trim(),
+                    $('#question10').val().trim()
+                ]
+            };
+            if (input == null) {
+                alert("Please fill the form");
             }
-            // If there aren't, render the end game screen.
-            else {
-                document.querySelector("#question").innerHTML = "Game Over!";
-                document.querySelector("#score").innerHTML = "Final Score: " + score + " out of " + questions.length;
-            }
-        }
+            // AJAX post the data to the friends API.
+            $.post("/api/friends", input, function (data) {
+                console.log("I am in" + input);
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.photo);
 
-        // Function that updates the score...
-        function updateScore() {
-            document.querySelector("#score").innerHTML = "Score: " + score;
-        }
+                // Show the modal with the best match
+                $("#result-model").modal("open");
 
-
-        // MAIN PROCESS
-        // ==============================================================================
-
-        // Calling functions to start the game.
-        renderQuestion();
-        updateScore();
-
-        // When the user presses a key, it will run the following function...
-        document.onkeyup = function (event) {
-
-            // If there are no more questions, stop the function.
-            if (questionIndex === questions.length) {
-                return;
-            }
-
-            // Determine which key was pressed, make it lowercase, and set it to the userInput variable.
-            var userInput = event.key.toLowerCase();
-
-            // Only run this code if "t" or "f" were pressed.
-            if (userInput === "t" || userInput === "f") {
-
-                // If they guess the correct answer, increase and update score, alert them they got it right.
-                if (userInput === questions[questionIndex].a) {
-                    alert("Correct!");
-                    score++;
-                    updateScore();
-                }
-                // If wrong, alert them they are wrong.
-                else {
-                    alert("Wrong!");
-                }
-
-                // Increment the questionIndex variable and call the renderQuestion function.
-                questionIndex++;
-                renderQuestion();
-
-            }
-
-        };
-
+            });
+        });
     </script>
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Frient Finder</title>
-</head>
-
-<body>
-
-  <h1>Friend Finder</h1>
-
-  <p id="score"></p>
-  <p id="question"></p>
-
-  <script>
-
-    // VARIABLES
-    // ==========================================================================
-
-    // The array of questions for our quiz game.
-    var questions = [
-      { q: "The sky is blue.", a: "t" },
-      { q: "There are 365 days in a year.", a: "t" },
-      { q: "There are 42 ounces in a pound.", a: "f" },
-      { q: "The Declaration of Independence was created in 1745.", a: "f" },
-      { q: "Bananas are vegetables.", a: "f" }
-    ];
-
-    // We start the game with a score of 0.
-    var score = 0;
-    // Variable to hold the index of current question.
-    var questionIndex = 0;
-
-    // FUNCTIONS
-    // ==============================================================================
-
-    // Function to render questions.
-    function renderQuestion() {
-      // If there are still more questions, render the next one.
-      if (questionIndex <= (questions.length - 1)) {
-        document.querySelector("#question").innerHTML = questions[questionIndex].q;
-      }
-      // If there aren't, render the end game screen.
-      else {
-        document.querySelector("#question").innerHTML = "Game Over!";
-        document.querySelector("#score").innerHTML = "Final Score: " + score + " out of " + questions.length;
-      }
-    }
-
-    // Function that updates the score...
-    function updateScore() {
-      document.querySelector("#score").innerHTML = "Score: " + score;
-    }
-
-
-    // MAIN PROCESS
-    // ==============================================================================
-
-    // Calling functions to start the game.
-    renderQuestion();
-    updateScore();
-
-    // When the user presses a key, it will run the following function...
-    document.onkeyup = function(event) {
-
-      // If there are no more questions, stop the function.
-      if (questionIndex === questions.length) {
-        return;
-      }
-
-      // Determine which key was pressed, make it lowercase, and set it to the userInput variable.
-      var userInput = event.key.toLowerCase();
-
-      // Only run this code if "t" or "f" were pressed.
-      if (userInput === "t" || userInput === "f") {
-
-        // If they guess the correct answer, increase and update score, alert them they got it right.
-        if (userInput === questions[questionIndex].a) {
-          alert("Correct!");
-          score++;
-          updateScore();
-        }
-        // If wrong, alert them they are wrong.
-        else {
-          alert("Wrong!");
-        }
-
-        // Increment the questionIndex variable and call the renderQuestion function.
-        questionIndex++;
-        renderQuestion();
-
-      }
-
-    };
-
-  </script>
-
-</body>
-
-</html> -->

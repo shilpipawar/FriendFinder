@@ -18,7 +18,7 @@ module.exports = function (app) {
 
         console.log(newfriend);
 
-        characters.push(newfriend);
+        friends.push(newfriend);
 
         res.json(newfriend);
     });
