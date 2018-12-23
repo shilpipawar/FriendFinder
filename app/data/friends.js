@@ -18,7 +18,7 @@
 // 9. For what in your life do you feel most grateful?
 
 // 10. If you could change anything about the way you were raised, what would it be?
-var friends = {
+var friends = [{
   "name":"Ahmed",
   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores":[
@@ -33,6 +33,37 @@ var friends = {
       4,
       1
     ]
-};
+},{
+  name: 'TestUser1',
+  photo: 'https://cdn.pixabay.com/photo/2014/07/17/01/12/audrey-hepburn-395110_1280.jpg',
+  scores: [
+    '2',
+    '4',
+    '1',
+    '1',
+    '1',
+    '1',
+    '1',
+    '2',
+    '1',
+    '5'
+  ]
+},
+{
+  name: 'TestUser2',
+  photo: 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg',
+  scores: [
+    '4',
+    '3',
+    '5',
+    '1',
+    '1',
+    '5',
+    '5',
+    '1',
+    '1',
+    '1'
+  ]
+}];
 
 module.exports = friends;
