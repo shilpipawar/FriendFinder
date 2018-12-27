@@ -236,8 +236,8 @@
             // If all required fields are filled
             // Gather user inputs
             var input = {
-                name: $('#match-name').val().trim(),
-                photo: $('#match-img').val().trim(),
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
                 scores: [
                     $('#question1').val().trim(),
                     $('#question2').val().trim(),
@@ -255,16 +255,16 @@
                 alert("Please fill the form");
             }
             // AJAX post the data to the friends API.
-            $.post("/api/friends", input, function (data) {
-                console.log("I am in" + input);
-                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                $("#match-name").text(data.name);
-                $("#match-img").attr("src", data.photo);
-
-                // Show the modal with the best match
-                $("#result-model").modal("open");
-
-            });
+            $.post('/api/friends', input)
+      		.done(function(data) {
+      			console.log('response = ' + JSON.stringify(data));
+      			// Set the name and image values of friend match
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+		    	// Pop open the modal dialog
+      			$('#modal1').modal('open');
+      		});
+            // Send the POST request.
         });
     </script>
 </body>
