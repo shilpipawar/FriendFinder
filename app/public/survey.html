@@ -235,10 +235,7 @@
 
             // If all required fields are filled
             // Gather user inputs
-            var input = {
-                name: $('#name').val().trim(),
-                photo: $('#photo').val().trim(),
-                scores: [
+            var  scores = [
                     $('#question1').val().trim(),
                     $('#question2').val().trim(),
                     $('#question3').val().trim(),
@@ -249,20 +246,26 @@
                     $('#question8').val().trim(),
                     $('#question9').val().trim(),
                     $('#question10').val().trim()
-                ]
+                ];
+            var input = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                arrayScore : scores.join()
             };
             if (input == null) {
                 alert("Please fill the form");
             }
-            // AJAX post the data to the friends API.
-            $.post('/api/friends', input)
-      		.done(function(data) {
-      			console.log('response = ' + JSON.stringify(data));
+            //Ajax Post
+            $.ajax("/api/friends", {
+                 type: "POST",
+                 data: input
+             }).done(function (data) {
+      			// console.log('response = ' + JSON.stringify(data));
       			// Set the name and image values of friend match
-      			$('#userMatch').html(data.matchName);
-		    	$("#userMatchImage").attr("src", data.matchImage);
+      			$('#match-name').html(data.matchName);
+		    	$("#match-img").attr("src", data.matchImage);
 		    	// Pop open the modal dialog
-      			$('#modal1').modal('open');
+      			$('#result-model').modal('open');
       		});
             // Send the POST request.
         });

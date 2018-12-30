@@ -1,10 +1,10 @@
 var path = require("path");
 
 var friends = require("../data/friends.js");
-var totalDifference = [];
+var totalDifference = 100;
 var total;
-var match_name;
-var match_image;
+var matchName;
+var matchImage;
 // Your apiRoutes.js file should contain two routes:
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
 module.exports = function (app) {
@@ -15,35 +15,25 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         var newfriend = req.body;
-
-        // Using a RegEx Pattern to remove spaces from newCharacter
-        // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-        newfriend.routeName = newfriend.name.replace(/\s+/g, "").toLowerCase();
+        var scores = req.body.arrayScore.split(",");
 
         console.log(newfriend);
+        console.log(scores);
         //Friend Matching Logic
         for (var i = 0; i < friends.length; i++) {
-            for (var j = 0; j < friends[i].scores.length; j++) {
-                var temp = parseInt(friends[i].scores[j]) - parseInt(newfriend[j]);
-                total = + temp;
-                totalDifference.push(total)
+             total = 0;
+            for (var j = 0; j < friends[i].length; j++) {
+                total = + Math.abs(parseInt(friends[i].scores[j]) - parseInt(scores[j]));
+                console.log(total);
             };
-            totalDifference.push(total);
-            if(totalDifference.length > 1){
-                for(var t = 0; t < totalDifference.length; t++){
-                    var temp = totalDifference[t];
-                    if(temp > totalDifference[t+1]){
-                        match_name = friends[i].name;
-                        match_image = friends[i].photo;
-                        console.log(match_name + "match_image" + match_image);
-                    }
-                };
-            };
+            if (total < totalDifference) {
+				totalDifference = total;
+				matchName = friends[i].name;
+				matchImage = friends[i].photo;
+}
         };
-
+        console.log(matchName + " matchImage :" + matchImage + " Friend: " + totalDifference);
         friends.push(newfriend);
-        console.log(match_name + "match_image" + match_image + "Friend" + totalDifference);
-
-        res.json({status: 'OK',match_name,match_image});
+        res.json({ status: 'OK', matchName, matchImage });
     });
 }
