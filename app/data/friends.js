@@ -19,8 +19,8 @@
 
 // 10. If you could change anything about the way you were raised, what would it be?
 var friends = [{
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Anne",
+  "photo":"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
   "scores":[
       5,
       1,
@@ -35,7 +35,7 @@ var friends = [{
     ]
 },{
   name: 'TestUser1',
-  photo: 'https://cdn.pixabay.com/photo/2014/07/17/01/12/audrey-hepburn-395110_1280.jpg',
+  photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
   scores: [
     '2',
     '4',
@@ -51,7 +51,7 @@ var friends = [{
 },
 {
   name: 'TestUser2',
-  photo: 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg',
+  photo: "http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg",
   scores: [
     '4',
     '3',
