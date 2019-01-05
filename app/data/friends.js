@@ -23,30 +23,30 @@ var friends = [{
   "photo":"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
   "scores":[
       5,
-      1,
-      4,
-      4,
       5,
-      1,
-      2,
       5,
-      4,
-      1
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
     ]
 },{
   name: 'TestUser1',
   photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
   scores: [
-    '2',
-    '4',
-    '1',
-    '1',
-    '1',
-    '1',
-    '1',
-    '2',
-    '1',
-    '5'
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
   ]
 },
 {
